@@ -1,0 +1,9 @@
+/output/*
+/ssl/*
+/setup/*
+!/setup/setup-aida.exe
+config.ini
+logo.png
+logo.ico
+todolist.json
+index2.html
