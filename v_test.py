@@ -79,7 +79,7 @@ def afficher_aide():
             table.add_row(f"[bold green]{cmd}[/bold green]", desc)
     console.print(table)
 
-# --- NOUVEAU : Fonctions de Productivité ---
+# --- Fonctions de Productivité ---
 
 def charger_taches():
     if not os.path.exists(TODO_FILE):
@@ -271,7 +271,6 @@ def rechercher_dans_fichiers():
 
 def raconter_blague():
     """Raconte une blague en utilisant l'API Blagues-API et en demandant un thème."""
-    # --- CORRECTION ICI ---
     api_keys = charger_cles_api()
     api_key = api_keys.get('blagues_api_key')
 
@@ -332,9 +331,6 @@ def raconter_blague():
         console.print(f"[bold red]Erreur de connexion : {e}[/bold red]")
 
 
-# --- Programme Principal (avec les autres fonctions) ---
-
-# ... (toutes les autres fonctions comme info_systeme, obtenir_meteo, etc. restent ici) ...
 # --- Utilitaires Fichiers & Système ---
 def afficher_arborescence():
     path_str = Prompt.ask("[cyan]Entrez le chemin du dossier à inspecter[/cyan]", default=".")
@@ -344,7 +340,6 @@ def afficher_arborescence():
 
     tree = Tree(f"📁 [bold blue]{os.path.abspath(path_str)}[/bold blue]")
     try:
-        # Implémentation simplifiée pour l'affichage
         paths = sorted(os.listdir(path_str))
         for path in paths:
             if os.path.isdir(os.path.join(path_str, path)):
@@ -399,7 +394,6 @@ def organiser_fichiers():
 
 # --- Outils Web & Réseau ---
 def obtenir_meteo():
-    # --- CORRECTION ICI ---
     # On récupère le dictionnaire de clés, puis la clé spécifique.
     api_keys = charger_cles_api()
     api_key = api_keys.get('weatherapi_key')
@@ -435,7 +429,6 @@ def obtenir_meteo():
         console.print(f"[bold red]Erreur de connexion : {e}[/bold red]")
 
 def obtenir_actualites():
-    # --- CORRECTION ICI ---
     api_keys = charger_cles_api()
     api_key = api_keys.get('gnews_api_key')
 
@@ -658,7 +651,6 @@ def main():
     while running:
         try:
             user_input = Prompt.ask(">>>")
-            # C'est ici que le False retourné par process_command est utilisé
             running = process_command(user_input, commandes, aliases)
             
         except EOFError: # Gère Ctrl+D
