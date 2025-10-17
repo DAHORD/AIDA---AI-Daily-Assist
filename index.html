@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="logo2.png">
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <title>AI Daily Assist (AIDA) - Votre Terminal, Réinventé</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -468,15 +468,39 @@
             margin-bottom: 5px;
             font-size: 0.9rem;
         }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .lang-switcher:hover {
+            background-color: var(--accent-color);
+            color: var(--heading-color);
+        }
     </style>
 </head>
 <body>
+
+    <a href="index_en.html" id="lang-switcher" class="lang-switcher">Switch to English</a>
 
     <header class="hero">
         <div class="container">
             <!-- Ajout du bloc logo + titre -->
             <div class="hero-logo-title">
-                <img src="logo2.png" alt="Logo AI Daily Assist" class="hero-logo-bg" />
+                <img src="logo.png" alt="Logo AI Daily Assist" class="hero-logo-bg" />
                 <div class="hero-logo-text">AI Daily Assist - <span>AIDA</span></div>
             </div>
             <h1 style="margin-top: 60px;">Votre Terminal, <span>Réinventé</span>.</h1>
